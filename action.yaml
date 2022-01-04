@@ -26,6 +26,7 @@ runs:
       shell: bash
     - run: |
         export DATREE_TOKEN="${{ inputs.datree_token }}"
+        ls ${{ inputs.chart_directory }}
         helm datree test ${{ inputs.chart_directory }} --ignore-missing-schemas -- --values ${{ inputs.chart_directory }}/${{ inputs.values_file }}
         echo "::set-output name=result::$?"
       shell: bash
