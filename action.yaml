@@ -26,7 +26,7 @@ runs:
         tar xvf helm-v3.4.1-linux-amd64.tar.gz
         chmod +x linux-amd64/helm
         ./linux-amd64/helm plugin install https://github.com/datreeio/helm-datree
-        ./linux-amd64/helm datree test ${{ inputs.chart_directory }} -- --values ${{ .inputs.value_file }} > output
+        ./linux-amd64/helm datree test ${{ inputs.chart_directory }} -- --values ${{ inputs.value_file }} > output
         result=$(cat output)
         echo "::set-output name=result::$result"
       shell: bash
