@@ -1,0 +1,13 @@
+name: "Action Helm Datree"
+description: "Run the helm datree plugin"
+inputs:
+  datree_token: 
+    description: "Datree user token"
+    required: true
+outputs:
+  result:
+    description: "Result of pass/failures"
+runs:
+  using: "composite"
+  steps:
+    - run: echo "Hello"
