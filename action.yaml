@@ -22,6 +22,8 @@ runs:
       shell: bash
     - run: sudo snap install helm --classic
       shell: bash
+    - run: helm plugin install https://github.com/datreeio/helm-datree
+      shell: bash
     - run: |
         export DATREE_TOKEN="${{ inputs.datree_token }}"
         helm datree test ${{ inputs.chart_directory }} -- --values ${{ inputs.value_file }} > output
