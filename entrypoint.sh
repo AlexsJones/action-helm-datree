@@ -1,4 +1,5 @@
 #!/bin/bash
 set -e
 
-echo "Hello" ${DATREE_TOKEN}
+result="Hello ${DATREE_TOKEN}"
+echo "::set-output name=result::$result"
