@@ -8,6 +8,7 @@ outputs:
   result:
     description: "Result of pass/failures"
 runs:
-  using: "composite"
-  steps:
-    - run: echo "Hello"
+  using: "docker"
+  image: "Dockerfile"
+  args: 
+   - ${{ inputs.datree_token }}
