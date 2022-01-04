@@ -5,11 +5,8 @@ jobs:
     name: We test it locally with act
     runs-on: "ubuntu-latest"
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          path: "action-helm-datree"
       - name: Test our Datree helm action
-        uses: ./ # Uses an action in the root directory
+        id: entry
+        uses: AlexsJones/action-helm-datree@main # Uses an action in the root directory
         with:
           datree_token: "2CHvnSLvs2AthcuyZYVAMH"

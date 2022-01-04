@@ -9,6 +9,6 @@ outputs:
     description: "Result of pass/failures"
 runs:
   using: "docker"
-  image: "ubuntu:latest"
+  image: "Dockerfile"
   args: 
    - ${{ inputs.datree_token }}
