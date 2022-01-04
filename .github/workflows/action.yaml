@@ -6,7 +6,7 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: Checkout
-        uses: actions/checkout@2
+        uses: actions/checkout@v2
         with:
           path: "action-helm-datree"
       - name: Test our Datree helm action
